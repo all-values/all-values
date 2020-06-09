@@ -30,3 +30,9 @@
 .topnav .icon {
   display: none;
 }
+
+/*Button padding*/
+.start-button{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
