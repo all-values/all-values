@@ -25,3 +25,8 @@
   background-color: #4CAF50;
   color: white;
 }
+
+/*Hide icon when not required*/
+.topnav .icon {
+  display: none;
+}
