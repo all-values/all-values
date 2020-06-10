@@ -53,8 +53,8 @@
     cursor: pointer;
 }
 .small_button, .small_button_off {
-    border: none;
-    border-radius: 8pt;
+    border: none; !important
+    border-radius: 8pt; !important
     padding: 8pt;
     width: 10%;
     min-width: 100pt;
