@@ -18,6 +18,7 @@ questions = [
           "govt": 0,
           "scty": 0,
           "revo": -10
+        }
     }
 
 ]
