@@ -59,8 +59,8 @@
         max_revo += Math.abs(questions[i].effect.revo)
     }
     function init_question() {
-        document.getElementById("question-text").innerHTML = /*questions[qn].question;*/ "Polak";
-        document.getElementById("question-number").innerHTML = /*"Pytanie " + (qn + 1) + " z " + (questions.length);*/ "Papież";
+        document.getElementById("question-text").innerHTML = questions[qn].question;;
+        document.getElementById("question-number").innerHTML = "Pytanie " + (qn + 1) + " z " + (questions.length);;
         if (prev_answer == null) {
             document.getElementById("back_button").style.display = 'none';
             document.getElementById("back_button_off").style.display = 'block';
