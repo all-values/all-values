@@ -52,11 +52,11 @@
     var prev_answer = null;
     init_question();
     for (var i = 0; i < questions.length; i++) {
-        max_econ += Math.abs(questions[i].effect.econ);
-        max_dipl += Math.abs(questions[i].effect.dipl);
-        max_govt += Math.abs(questions[i].effect.govt);
-        max_scty += Math.abs(questions[i].effect.scty);
-        max_scty += Math.abs(questions[i].effect.revo);
+        max_econ += Math.abs(questions[i].effect.econ)
+        max_dipl += Math.abs(questions[i].effect.dipl)
+        max_govt += Math.abs(questions[i].effect.govt)
+        max_scty += Math.abs(questions[i].effect.scty)
+        max_revo += Math.abs(questions[i].effect.revo)
     }
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
@@ -72,11 +72,11 @@
     }
 
     function next_question(mult) {
-        econ += mult*questions[qn].effect.econ;
-        dipl += mult*questions[qn].effect.dipl;
-        govt += mult*questions[qn].effect.govt;
-        scty += mult*questions[qn].effect.scty;
-        revo += mult*questions[qn].effect.revo;
+        econ += mult*questions[qn].effect.econ
+        dipl += mult*questions[qn].effect.dipl
+        govt += mult*questions[qn].effect.govt
+        scty += mult*questions[qn].effect.scty
+        revo += mult*questions[qn].effect.revo
         qn++;
         prev_answer = mult;
         if (qn < questions.length) {
