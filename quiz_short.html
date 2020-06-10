@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <title>AllValues</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap-grid.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap-grid.min.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap-reboot.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap-reboot.min.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/extra_styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="application/javascript" src="questions_short.js">
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="/all-values">Strona główna</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="ruleset">
+    <h2 style="text-align:center;" id="question-number"></h2>
+    <p class="question" id="question-text" style="background-color: #e6f3ff;"></p>
+    <button class="button" onclick="next_question( 1.0)">Zdecydowanie się zgadzam</button> <br>
+    <button class="button" onclick="next_question( 0.5)">Zgadzam się</button> <br>
+    <button class="button" onclick="next_question( 0.0)">Nie mam zdania</button> <br>
+    <button class="button" onclick="next_question(-0.5)">Nie zgadzam się</button> <br>
+    <button class="button" onclick="next_question(-1.0)">Zdecydowanie się nie zgadzam</button> <br>
+    <button class="small_button" onclick="prev_question()" id="back_button">Cofnij</button>
+    <button class="small_button_off" onclick="prev_question()" id="back_button_off">Cofnij</button>
+  </div>
+  
+  <script>
+    var max_econ, max_dipl, max_govt, max_scty, max_revo; // Max possible scores
+    max_econ = max_dipl = max_govt = max_scty = max_revo = 0;
+    var econ, dipl, govt, scty, revo; // User's scores
+    econ = dipl = govt = scty = revo = 0;
+    var qn = 0; // Question number
+    var prev_answer = null;
+    init_question();
+    for (var i = 0; i < questions.length; i++) {
+        max_econ += Math.abs(questions[i].effect.econ)
+        max_dipl += Math.abs(questions[i].effect.dipl)
+        max_govt += Math.abs(questions[i].effect.govt)
+        max_scty += Math.abs(questions[i].effect.scty)
+        max_scty += Math.abs(questions[i].effect.revo)
+    }
+    function init_question() {
+        document.getElementById("question-text").innerHTML = questions[qn].question;
+        document.getElementById("question-number").innerHTML = "Question " + (qn + 1) + " of " + (questions.length);
+        if (prev_answer == null) {
+            document.getElementById("back_button").style.display = 'none';
+            document.getElementById("back_button_off").style.display = 'block';
+        } else {
+            document.getElementById("back_button").style.display = 'block';
+            document.getElementById("back_button_off").style.display = 'none';
+        }
+
+    }
+
+    function next_question(mult) {
+        econ += mult*questions[qn].effect.econ;
+        dipl += mult*questions[qn].effect.dipl;
+        govt += mult*questions[qn].effect.govt;
+        scty += mult*questions[qn].effect.scty;
+        revo += mult*questions[qn].effect.revo;
+        qn++;
+        prev_answer = mult;
+        if (qn < questions.length) {
+            init_question();
+        } else {
+            results();
+        }
+    }
+    function prev_question() {
+        if (prev_answer == null) {
+            return;
+        }
+        qn--;
+        econ -= prev_answer * questions[qn].effect.econ;
+        dipl -= prev_answer * questions[qn].effect.dipl;
+        govt -= prev_answer * questions[qn].effect.govt;
+        scty -= prev_answer * questions[qn].effect.scty;
+        revo -= prev_answer * questions[qn].effect.revo;
+        prev_answer = null;
+        init_question();
+
+    }
+    function calc_score(score,max) {
+        return (100*(max+score)/(2*max)).toFixed(1);
+    }
+    function results() {
+        location.href = `results.html`
+            + `?e=${calc_score(econ,max_econ)}`
+            + `&d=${calc_score(dipl,max_dipl)}`
+            + `&g=${calc_score(govt,max_govt)}`
+            + `&s=${calc_score(scty,max_scty)}`
+            + `&r=${calc_score(revo,max_revo)}`
+    }
+</script>
+  
+</body>
+<html>
