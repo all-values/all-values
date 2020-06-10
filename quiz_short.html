@@ -23,6 +23,7 @@
     </a>
   </div>
   <div>
+    <center>
     <h2 style="text-align:center;" id="question-number"></h2>
     <p class="question" id="question-text" style="background-color: #e6f3ff;"></p>
     <button class="button" onclick="next_question( 1.0)">Zdecydowanie się zgadzam</button> <br>
@@ -30,8 +31,9 @@
     <button class="button" onclick="next_question( 0.0)">Nie mam zdania</button> <br>
     <button class="button" onclick="next_question(-0.5)">Nie zgadzam się</button> <br>
     <button class="button" onclick="next_question(-1.0)">Zdecydowanie się nie zgadzam</button> <br>
-    <button class="small_button" onclick="prev_question()" id="back_button">Cofnij</button>
+    <button class="small_button" onclick="prev_question()" id="back_button">Cofnij</button><br>
     <button class="small_button_off" onclick="prev_question()" id="back_button_off">Cofnij</button>
+    <center>
   </div>
   
   <script>
@@ -51,7 +53,7 @@
     }
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
-        document.getElementById("question-number").innerHTML = "Question " + (qn + 1) + " of " + (questions.length);
+        document.getElementById("question-number").innerHTML = "Pytanie " + (qn + 1) + " z " + (questions.length);
         if (prev_answer == null) {
             document.getElementById("back_button").style.display = 'none';
             document.getElementById("back_button_off").style.display = 'block';
