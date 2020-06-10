@@ -72,3 +72,11 @@
     cursor: not-allowed;
     margin: -4px auto;
 }
+
+/*bottom links*/
+.linkbar {
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
