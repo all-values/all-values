@@ -1,7 +1,7 @@
 questions = [
     {
-      "question":"Państwo powinno ponosić wszelkie koszty leczenia obywateli."
-      "effect":{
+      "question": "Państwo powinno ponosić wszelkie koszty leczenia obywateli."
+      "effect": {
           "econ": -10,
           "dipl": 0,
           "govt": 0,
@@ -11,8 +11,8 @@ questions = [
     },
     
     {
-        "question":"W walce o zmiany nie możemy uciekać się do przemocy."
-      "effect":{
+        "question": "W walce o zmiany nie możemy uciekać się do przemocy."
+      "effect": {
           "econ": 0,
           "dipl": 0,
           "govt": 0,
