@@ -80,3 +80,9 @@
     position: fixed;
     bottom: 0;
 }
+
+.start-button-small {
+    width: 10%;
+    height: 5%;
+    font-size: 8pt;
+}
