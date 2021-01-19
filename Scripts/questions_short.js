@@ -216,9 +216,9 @@ questions = [
           "scty": 0,
           "revo": 0
         }
-    }
+    },
 
-{
+    {
       "question": "Obywatele powinni mieć możliwość dopłacenia dodatkowej sumy pieniędzy aby otrzymać wyższą jakość usług publicznych, \n na przykład dostęp do lepszej jakości edukacji.",
       "effect": {
           "econ": 10,
