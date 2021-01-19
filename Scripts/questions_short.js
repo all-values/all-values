@@ -271,7 +271,280 @@ questions = [
           "scty": 0,
           "revo": 0
         }
-    }
+    },
+    
+    {
+      "question": "Programy socjalne, które nie ułatwiają znalezienia pracy, powinny zostać zlikwidowane.", //26
+      "effect": {
+          "econ": 10,
+          "dipl": 0,
+          "govt": 0,
+          "scty": 0,
+          "revo": 0
+      }
+    },
+    
+    {
+        "question": "Przy dokonywaniu zmian powinno się brać pod uwagę zdanie całego społeczeństwa.",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": 0,
+          "scty": 0,
+          "revo": 10
+        }
+    },
+    
+     {
+        "question": "Aborcja jest zawsze niemoralna.",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": 0,
+          "scty": 10,
+          "revo": 0
+        }
+    },
+    
+    {
+        "question": "Jeśli społeczńość podejmie decyzję o secesji, decyzja ta powinna zostać uszanowana.",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": -10,
+          "scty": 0,
+          "revo": 0
+        }
+    },
+    
+   {
+       "question": "Jest mi obojętne, czy moje dziecko zwiąże się z osobą z mojego kraju, czy z obcokrajowcem.",
+      "effect": {
+          "econ": 0,
+          "dipl": -10,
+          "govt": 0,
+          "scty": 0,
+          "revo": 0
+        }
+    },
+    
+    {
+      "question": "Działalność dobroczynna nie jest w stanie w pełni zastąpipć państwowych świadczeń.",
+      "effect": {
+          "econ": -10,
+          "dipl": 0,
+          "govt": 0,
+          "scty": 0,
+          "revo": 0
+      }
+    },
+    
+    {
+        "question": "Wymazywanie elementów przeszłości jest nieodłączną częścią rozwoju społeczeństwa.",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": 0,
+          "scty": 0,
+          "revo": -10
+        }
+    },
+    
+     {
+        "question": "Płeć jest określona przy urodzeniu i nie da się jej zmienić.",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": 0,
+          "scty": 10,
+          "revo": 0
+        }
+    },
+    
+    {
+        "question": "Tylko służby państwowe powinny mieć dostęp do broni palnej.",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": 10,
+          "scty": 0,
+          "revo": 0
+        }
+    },
+    
+   {
+       "question": "Każy naród powinien mieć prawo do posiadania własnego państwa.",
+      "effect": {
+          "econ": 0,
+          "dipl": -10,
+          "govt": 0,
+          "scty": 0,
+          "revo": 0
+        }
+    },
+    
+    {
+      "question": "Pracownik powinien zarabiać dokładnie tyle, ile pracodawca jest skłonny mu zapłacić, bez względu na rodzaj wykonywanej pracy.",
+      "effect": {
+          "econ": 10,
+          "dipl": 0,
+          "govt": 0,
+          "scty": 0,
+          "revo": 0
+      }
+    },
+    
+    {
+        "question": "W imię osiągnięcia istotnego celu wszytkie środki są dopuszczalne..",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": 0,
+          "scty": 0,
+          "revo": -10
+        }
+    },
+    
+     {
+        "question": "Dostęp do legalnej pornografii przez dorosłych obywateli nie powinien byc ograniczany.",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": 0,
+          "scty": -10,
+          "revo": 0
+        }
+    },
+    
+    {
+        "question": "Państwo powino mieć możliwość ograniczania działalności organizacji, które uzna za szkodliwe.",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": 10,
+          "scty": 0,
+          "revo": 0
+        }
+    },
+    
+   {
+       "question": "Imigranci mogą osiedlać się w moim kraju tylko pod warunkiem, że przyjmą jego kulturę i zwyczaje.",
+      "effect": {
+          "econ": 0,
+          "dipl": 10,
+          "govt": 0,
+          "scty": 0,
+          "revo": 0
+        }
+    },
+    {
+      "question": "Istnienie spółek państwowych w wielu branżach jest skutecznym środkiem ochrony interesu obywateli.",
+      "effect": {
+          "econ": -10,
+          "dipl": 0,
+          "govt": 0,
+          "scty": 0,
+          "revo": 0
+      }
+    },
+    
+    {
+        "question": "Brak czynnego sprzeciwu wobec złego systemu jest równoznaczny z poparciem go.",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": 0,
+          "scty": 0,
+          "revo": -10
+        }
+    },
+    
+     {
+        "question": "Uczniowie w okresie dojrzewania powinni mieć możliwość usyskania wiedzy na temat seksualności na zajęciach szkolnych.",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": 0,
+          "scty": -10,
+          "revo": 0
+        }
+    },
+    
+    {
+        "question": "Każdy obywatel powienin mieć prawo do całkowicie tajnej korespondencji.",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": -10,
+          "scty": 0,
+          "revo": 0
+        }
+    },
+    
+   {
+       "question": "Działanie militarne państw może być uzasadnione jedynie obroną.",
+      "effect": {
+          "econ": 0,
+          "dipl": -10,
+          "govt": 0,
+          "scty": 0,
+          "revo": 0
+        }
+    },
 
+    {
+      "question": "Związki zawodowe skutecznie walczą o prawa pracowników.",
+      "effect": {
+          "econ": -10,
+          "dipl": 0,
+          "govt": 0,
+          "scty": 0,
+          "revo": 0
+      }
+    },
+    
+    {
+        "question": "Dla obalonych siłą przywódców sama utrata władzy jest wystarczającą karą.",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": 0,
+          "scty": 0,
+          "revo": 10
+        }
+    },
+    
+     {
+        "question": "Płeć jest dobrym wyznacznikiem ról społecznych.",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": 0,
+          "scty": 10,
+          "revo": 0
+        }
+    },
+    
+    {
+        "question": "Tortury nie powinny być dopuszczalnym narzędziem zdobywania informacji.",
+      "effect": {
+          "econ": 0,
+          "dipl": 0,
+          "govt": -10,
+          "scty": 0,
+          "revo": 0
+        }
+    },
+    
+   {
+       "question": "Państwo powinno dbać o prawa obywateli, którzy na stałe przebywają za granicą.",
+      "effect": {
+          "econ": 0,
+          "dipl": -10,
+          "govt": 0,
+          "scty": 0,
+          "revo": 0
+        }
+    }
 
 ];
