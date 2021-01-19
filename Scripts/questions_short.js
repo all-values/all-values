@@ -47,7 +47,7 @@ questions = [
        "question": "Prawa obowiązujące w naszym państwie powinny być stanowione tylko przez jego obywateli.",
       "effect": {
           "econ": 0,
-          "dipl": -10,
+          "dipl": 10,
           "govt": 0,
           "scty": 0,
           "revo": 0
@@ -72,7 +72,7 @@ questions = [
           "dipl": 0,
           "govt": 0,
           "scty": 0,
-          "revo": -10
+          "revo": 10
         }
     },
     
@@ -157,7 +157,7 @@ questions = [
        "question": "Organizacje międzynarodowe są zagrożeniem dla suwerenności ich członków.",
       "effect": {
           "econ": 0,
-          "dipl": -10,
+          "dipl": 10,
           "govt": 0,
           "scty": 0,
           "revo": 0
