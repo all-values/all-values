@@ -219,7 +219,7 @@ questions = [
     },
 
     {
-      "question": "Obywatele powinni mieć możliwość dopłacenia dodatkowej sumy pieniędzy aby otrzymać wyższą jakość usług publicznych, \n na przykład dostęp do lepszej jakości edukacji.",
+      "question": "Obywatele powinni mieć możliwość dopłacenia dodatkowej sumy pieniędzy aby otrzymać wyższą jakość usług publicznych, na przykład dostęp do lepszej jakości edukacji.",
       "effect": {
           "econ": 10,
           "dipl": 0,
