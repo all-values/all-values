@@ -100,7 +100,7 @@
 
     }
     function calc_score(score,max) {
-        return ((max+score)/(max)).toFixed(1);
+        return ((score/max)*100).toFixed(1);
     }
     function results() {
         location.href = `results_short.html`
