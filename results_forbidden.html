@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <title>AllValues</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap-grid.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap-grid.min.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap-reboot.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap-reboot.min.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/extra_styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="/all-values">Strona główna</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <center>
+  <div id="results"></div>
+  <div id="explanations">
+  <h1>Wyjaśnienie idei</h1><br/>
+  <p>Chciałeś wyjaśnienia? Nie dla psa, nie dla Polaka, dla pana to!</p><br/>
+  </center>
+  <div class="linkbar" id="myLinkbar">
+    <center>
+    Zespół AllValues 2021 | 
+    <a rel="noopener noreferrer" target="_blank" href="http://facebook.com/AllValues">Facebook</a> |
+    <a rel="noopener noreferrer" target="_blank" href="http://github.com/all-values/all-values">GitHub</a>
+    </center>
+  </div>
+</div>
+<script type="text/javascript">
+function getQueryVariable(variable)
+  {
+         var query = window.location.search.substring(1);
+         var vars = query.split("&");
+         for (var i=0;i<vars.length;i++) {
+                 var pair = vars[i].split("=");
+                 if(pair[0] == variable) {return pair[1];}
+         }
+         return(NaN);
+ }
+document.getElementById("results").innerHTML = "Wynik: " + getQueryVariable("s");
+</script>
+</body>
+</html>
