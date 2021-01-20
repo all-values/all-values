@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <title>AllValues</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap-grid.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap-grid.min.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap-reboot.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/bootstrap-reboot.min.css" />
+  <link rel="stylesheet" type="text/css" href="Styles/extra_styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="/all-values">Strona główna</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div style="bakcground-color: #555555;">
+    <center>
+    <h2 style="text-align:center;" id="question-number" style="background-color: #555555;">Ładowanie...</h2>
+    <p class="question" id="question-text" style="background-color: #e6f3ff; font-size: 16pt;">Ładowanie...</p>
+    <button class="button" onclick="next_question( 1.0)" style="background-color: #77ff77;">Zdecydowanie się zgadzam</button> <br>
+    <button class="button" onclick="next_question( 0.5)" style="background-color: #ccffcc;">Zgadzam się</button> <br>
+    <button class="button" onclick="next_question( 0.0)">Nie mam zdania</button> <br>
+    <button class="button" onclick="next_question(-0.5)" style="background-color: #ffcccc;">Nie zgadzam się</button> <br>
+    <button class="button" onclick="next_question(-1.0)" style="background-color: #ff7777;">Zdecydowanie się nie zgadzam</button> <br>
+    <button class="small_button" onclick="prev_question()" id="back_button">Cofnij</button><br>
+    <button class="small_button_off" onclick="prev_question()" id="back_button_off">Cofnij</button>
+    </center>
+  </div>
+  <div class="linkbar" id="myLinkbar">
+    <center>
+    Zespół AllValues 2020 | 
+    <a rel="noopener noreferrer" target="_blank" href="http://facebook.com/AllValues">Facebook</a> |
+    <a rel="noopener noreferrer" target="_blank" href="http://github.com/all-values/all-values">GitHub</a>
+    </center>
+  </div>
+  
+  <script type="application/javascript" src="Scripts/questions_forbidden.js"></script>
+  <script type="text/javascript">
+    var max_score; // Max possible scores
+    max_score = 0;
+    var score; // User's scores
+    score = 0;
+    var qn = 0; // Question number
+    var prev_answer = null;
+    init_question();
+    for (var i = 0; i < questions.length; i++) {
+        max_score += Math.abs(questions[i].effect)
+    }
+    function init_question() {
+        document.getElementById("question-text").innerHTML = questions[qn].question;
+        document.getElementById("question-number").innerHTML = "Pytanie " + (qn + 1) + " z " + (questions.length);
+        if (prev_answer == null) {
+            document.getElementById("back_button").style.display = 'none';
+            document.getElementById("back_button_off").style.display = 'block';
+        } else {
+            document.getElementById("back_button").style.display = 'block';
+            document.getElementById("back_button_off").style.display = 'none';
+        }
+
+    }
+
+    function next_question(mult) {
+        score += mult*questions[qn].effect
+        qn++;
+        prev_answer = mult;
+        if (qn < questions.length) {
+            init_question();
+        } else {
+            results();
+        }
+    }
+    function prev_question() {
+        if (prev_answer == null) {
+            return;
+        }
+        qn--;
+        score -= prev_answer * questions[qn].effect.econ;
+        init_question();
+
+    }
+    function calc_score(score,max) {
+        return ((score/max)*100).toFixed(1);
+    }
+    function results() {
+        location.href = `results_short.html`
+            + `?s=${calc_score(econ,max_econ)}`
+    }
+</script>
+  
+</body>
+</html>
