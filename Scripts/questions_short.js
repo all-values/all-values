@@ -471,7 +471,7 @@ questions = [
     },
     
     {
-        "question": "Każdy obywatel powienin mieć prawo do całkowicie tajnej korespondencji.",
+        "question": "Każdy obywatel powinien mieć prawo do całkowicie tajnej korespondencji.",
       "effect": {
           "econ": 0,
           "dipl": 0,
