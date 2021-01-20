@@ -329,7 +329,7 @@ questions = [
     },
     
     {
-      "question": "Działalność dobroczynna nie jest w stanie w pełni zastąpipć państwowych świadczeń.",
+      "question": "Działalność dobroczynna nie jest w stanie w pełni zastąpić państwowych świadczeń.",
       "effect": {
           "econ": -10,
           "dipl": 0,
